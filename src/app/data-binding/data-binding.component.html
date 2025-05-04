@@ -1,0 +1,28 @@
+<div class="container border border-dark">
+
+    <ul>
+        <li>One way data binding</li>
+        <ol>
+            <li>InterPolation</li>
+            <p>{{data+10}}</p>
+
+            <li>Property Binding -[]</li>
+            <input type="text" [value]="username">
+            <input type="text" [placeholder]="'Enter username here'">
+            <p [style]="'color:red;'">Hello</p>
+
+            <li>Event Binding ()</li>
+            <button class="btn btn-primary" (dblclick)="displayMessage()">Click here</button>
+
+            <li>Style Binding</li>
+            <h3 [style.background-color]="color">Hello</h3>
+
+            <button class="btn btn-dark m-3" (click)="changeColor('green')">Green</button>
+
+            <button class="btn btn-dark m-3" (click)="changeColor('red')">Red</button>
+            
+            <button class="btn btn-dark m-3" (click)="changeColor('yellow')">Yellow</button>
+        </ol>
+        <li>Two way data binding</li>
+</ul>
+</div>
