@@ -1,0 +1,29 @@
+<div class="container border border-dark m-3 border-2">
+    <p>directives works!</p>
+
+    <h3 *ngIf="status" class="text-white bg-danger">XYZ</h3>
+    <button class="btn btn-primary" (click)="changeStatus()">changeStatus</button>
+
+    <hr>
+    <p>Hello</p>
+    <hr>
+
+    <h3 *ngIf="true ;else elseCode" class="text-white bg-danger">XYZ</h3>
+    <ng-template #elseCode>
+        <h3>Bye Bye !!!!!!</h3>
+    </ng-template>
+
+    <hr>
+
+    <ng-container *ngIf="loggedIn; then login else logout"></ng-container>
+    <ng-template #login>
+        <h1>You are logged In</h1>
+    </ng-template>
+    <ng-template #logout>
+        <h1>You are logged Out</h1>
+    </ng-template>
+
+    <button class="btn btn-primary" (click)="changeLoggedIn()">Click</button>
+    
+
+</div>

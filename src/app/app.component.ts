@@ -6,10 +6,13 @@ import { Product } from './product/product.component';
 import { CustomerComponent } from './customers/customer.component';
 import { StudentComponent } from './student/student.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { AComponent } from './a/a.component';
+import { BookComponent } from './book/book.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @Component({
   selector: 'app-root',
-  imports: [UserComponent,CategoryComponent,Product,CustomerComponent,StudentComponent,DataBindingComponent],
+  imports: [UserComponent,CategoryComponent,Product,CustomerComponent,StudentComponent,DataBindingComponent,AComponent,BookComponent,DirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

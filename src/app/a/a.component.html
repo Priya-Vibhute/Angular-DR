@@ -1,0 +1,10 @@
+<p>a works!</p>
+<div class="container border border-primary">
+    <app-b [receivedData]="parentData"></app-b>
+    <app-b [receivedData]="{id:102,name:'xyz'}"></app-b>
+
+    <hr>
+
+    <app-b (eventemiiter)="receiveData($event)"></app-b>
+
+</div>
