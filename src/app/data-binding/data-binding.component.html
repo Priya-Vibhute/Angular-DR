@@ -24,5 +24,12 @@
             <button class="btn btn-dark m-3" (click)="changeColor('yellow')">Yellow</button>
         </ol>
         <li>Two way data binding</li>
+        <h3>ngModel</h3>
+        <p>{{inputData}}</p>
+              
+        <input type="text" [(ngModel)]="inputData">
+            
+        <p>{{inputData}}</p>
+
 </ul>
 </div>
