@@ -24,6 +24,66 @@
     </ng-template>
 
     <button class="btn btn-primary" (click)="changeLoggedIn()">Click</button>
-    
+
+    <hr>
+
+    <p class="border border-dark m-2 p-3" *ngFor="let i of names;index as m; first as f; last as l">
+        {{i}}
+        first: {{f}} ||
+        last: {{l}} ||
+        {{m}}
+    </p>
+
+
+    <hr>
+
+    <p class="border border-dark m-2 p-3" *ngFor="let student of students">
+        {{student.id}} {{student.name}}
+    </p>
+
+    <!-- Attribute Directives   ngClass ngStyle ngModel -->
+
+    <p [ngClass]="['bg-danger','text-center','border','m-3','p-3']"> Hello </p>
+    <h3 [ngClass]="{'bg-success':false,'text-center':true}">ABC</h3>
+
+    <hr>
+
+    <h3>ngClass</h3>
+
+    <div class="card m-3" style="max-width: 18rem;" [ngClass]="{'bg-dark':darkTheme,'text-white':darkTheme,
+              'bg-light':!darkTheme,'text-dark':!darkTheme}">
+
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h5 class="card-title">Light card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+
+    <button class="btn btn-primary mb-3" (click)="toggle()"> Toggle </button>
+
+    <!-- ngStyle -->
+
+    <p [ngStyle]="boxStyles()">ngStyle</p>
+    <button class="btn btn-danger m-3" (click)="changeHighLight()">
+        {{isHighlighted?'remove':'add'}} </button>
+
+        <!-- ---------------------------- -->
+    <div class="bg-danger circle"
+    [ngStyle]="{'border-radius': borderRadius}">
+         
+    </div>
+
+    <h1>{{borderRadius}}</h1>
+
+    <button class="btn btn-primary m-2" 
+    (click)="changeBorderRadius('0% 0% 50% 50%')">1</button>
+
+    <button class="btn btn-primary m-2"
+     (click)="changeBorderRadius('50%')">2</button>
+
+    <button class="btn btn-primary m-2" 
+    (click)="changeBorderRadius('50% 50% 0% 0%')">3</button>
 
 </div>
